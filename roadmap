@@ -1,0 +1,982 @@
+Sim. Para o **Google Antigravity**, vale deixar o prompt mais orientado à **execução do projeto**, especificando stack, estrutura de arquivos, componentes, responsividade, SEO e critérios de aceite. Não é necessário tratar como um simples prompt de geração visual.
+
+ Abaixo está uma versão já adaptada para você colar no Antigravity.
+
+ Você é um **engenheiro de software frontend sênior + UI/UX designer especializado em landing pages de alta conversão**.
+
+ Quero que você desenvolva do zero uma **landing page estática, profissional, premium, responsiva e otimizada para conversão** para a **Clínica Move Pilates e Fisioterapia**, localizada em Embu das Artes – SP.
+
+ Não quero apenas um protótipo, wireframe ou descrição. **Implemente o projeto completo no ambiente do Antigravity**, criando os arquivos, componentes, estilos, estrutura e funcionalidades necessárias para que o site possa ser executado e posteriormente publicado.
+
+ Antes de começar a implementar, analise todo o briefing abaixo e defina a melhor arquitetura para o projeto.
+
+---
+
+ # 1\. OBJETIVO DO PROJETO
+
+ Criar uma landing page para uma clínica de Pilates e Fisioterapia com foco em:
+
+ - Apresentar a Clínica Move
+- Mostrar os principais serviços
+- Gerar confiança
+- Destacar as avaliações do Google
+- Apresentar localização e contato
+- Direcionar visitantes para o WhatsApp
+- Gerar novos agendamentos
+
+ A conversão principal da página será:
+
+ **AGENDAR PELO WHATSAPP**
+
+ O site deve ser construído pensando principalmente em usuários acessando pelo celular.
+
+---
+
+ # 2\. DADOS REAIS DA EMPRESA
+
+ Nome:
+
+ **Clínica Move Pilates e Fisioterapia**
+
+ Segmento:
+
+ **Pilates | Fisioterapia | Quiropraxia | Osteopatia | Saúde e Bem-estar**
+
+ Endereço:
+
+ **R. Nossa Sra. do Rosário, 281 - Centro, Embu das Artes - SP, 06803-430**
+
+ Telefone/WhatsApp:
+
+ **(11) 99692-9088**
+
+ Instagram:
+
+ **@movepilatesestudio**
+
+ URL do Instagram:
+
+ https://www.instagram.com/movepilatesestudio/
+
+ Avaliação informada:
+
+ **4,9 estrelas no Google**
+
+ Quantidade informada:
+
+ **aproximadamente 120 avaliações**
+
+ Página do Google fornecida pelo cliente:
+
+ https://www.google.com/search?q=cl%C3%ADnica+move+pilates+e+fisioterapia
+
+---
+
+ # 3\. SERVIÇOS
+
+ A clínica oferece os seguintes serviços:
+
+ ### Pilates
+
+ - Pilates com aparelhos
+- Pilates de solo
+- Aula particular de Pilates
+- Aula para iniciantes
+- Aula avançada
+- Aula de final de semana
+- Pilates para gestantes
+- Pilates para idosos
+
+ ### Fisioterapia
+
+ - Fisioterapia
+- Fisioterapia ortopédica
+- Fisioterapia para gestantes
+- Fisioterapia para idosos
+- Reabilitação pós-cirúrgica
+- Tratamento para escoliose
+- Tratamento de artrite
+
+ ### Outros
+
+ - Quiropraxia
+- Osteopatia
+
+ Não invente novos serviços.
+
+---
+
+ # 4\. DIRETRIZ DE IMPLEMENTAÇÃO
+
+ Desenvolva o projeto como uma aplicação frontend estática.
+
+ Se o ambiente já possuir uma stack configurada, **preserve a stack existente** e adapte a implementação a ela.
+
+ Caso seja necessário escolher a stack, prefira:
+
+ - React
+- TypeScript
+- Vite
+- CSS moderno ou Tailwind CSS
+
+ Use componentes reutilizáveis.
+
+ Evite dependências desnecessárias.
+
+ A aplicação deve ser simples de manter e fácil de publicar.
+
+ Não criar:
+
+ - Backend
+- Banco de dados
+- Login
+- CMS
+- Área administrativa
+- Sistema de agendamento próprio
+
+ O agendamento será realizado externamente pelo WhatsApp.
+
+---
+
+ # 5\. ARQUITETURA
+
+ Organize o projeto de maneira profissional.
+
+ Separar:
+
+ - componentes
+- seções
+- dados
+- assets
+- estilos
+- utilitários
+
+ Sempre que fizer sentido, criar componentes reutilizáveis como:
+
+ - Header
+- Button
+- WhatsAppButton
+- Hero
+- TrustBar
+- AboutSection
+- ServicesSection
+- ServiceCard
+- BenefitsSection
+- TestimonialsSection
+- InstagramSection
+- LocationSection
+- FinalCTA
+- Footer
+
+ Evitar criar um único arquivo gigante contendo toda a página.
+
+---
+
+ # 6\. DESIGN SYSTEM
+
+ Criar um pequeno design system consistente.
+
+ ## Cores
+
+ Principal:
+
+ `#71806A`
+
+ Verde escuro:
+
+ `#26332C`
+
+ Background:
+
+ `#F7F5EF`
+
+ Creme:
+
+ `#EDE8DC`
+
+ Texto:
+
+ `#30352F`
+
+ Branco:
+
+ `#FFFFFF`
+
+ Pode ajustar levemente os valores se isso melhorar o resultado visual.
+
+ ## Tipografia
+
+ Utilizar uma combinação elegante.
+
+ Sugestão:
+
+ Títulos:
+
+ **DM Serif Display** ou **Playfair Display**
+
+ Textos:
+
+ **Inter** ou **Manrope**
+
+ Não utilizar muitas fontes.
+
+---
+
+ # 7\. DIREÇÃO DE UI/UX
+
+ A estética deve combinar:
+
+ **Pilates boutique + clínica especializada + bem-estar + sofisticação + acolhimento.**
+
+ O resultado NÃO deve parecer:
+
+ - hospital
+- academia comum
+- template WordPress genérico
+- landing page de startup
+- site corporativo frio
+
+ Quero uma aparência editorial, sofisticada e contemporânea.
+
+ Utilizar:
+
+ - bastante espaço em branco
+- imagens grandes
+- bordas arredondadas moderadas
+- sombras sutis
+- cards elegantes
+- tipografia sofisticada
+- microinterações
+- bastante respiro entre as seções
+
+---
+
+ # 8\. ESTRUTURA DA LANDING PAGE
+
+ Implementar exatamente nesta ordem:
+
+ 1. Header
+2. Hero
+3. Barra de confiança
+4. Sobre a clínica
+5. Pilates
+6. Fisioterapia
+7. Benefícios
+8. Públicos/perfis
+9. Diferenciais
+10. Depoimentos
+11. Instagram
+12. Localização
+13. CTA final
+14. Footer
+
+---
+
+ # 9\. HEADER
+
+ Header fixo/sticky.
+
+ Desktop:
+
+ Logo:
+
+ **MOVE**
+
+ Subtítulo:
+
+ **Pilates & Fisioterapia**
+
+ Menu:
+
+ - Início
+- A Clínica
+- Pilates
+- Fisioterapia
+- Benefícios
+- Depoimentos
+- Localização
+
+ CTA:
+
+ **Agendar avaliação**
+
+ Ao fazer scroll, o header deve receber fundo sólido off-white e uma sombra extremamente sutil.
+
+ Mobile:
+
+ - Logo
+- Botão WhatsApp
+- Menu hamburger
+
+ O menu mobile deve possuir animação suave.
+
+---
+
+ # 10\. HERO
+
+ Criar um hero visualmente forte.
+
+ Layout desktop dividido aproximadamente:
+
+ 50% texto / 50% imagem.
+
+ Headline:
+
+ **Movimente seu corpo. Cuide da sua saúde. Viva melhor.**
+
+ Subheadline:
+
+ **Pilates e Fisioterapia em Embu das Artes para você cuidar do corpo, melhorar seus movimentos e conquistar mais qualidade de vida.**
+
+ CTA principal:
+
+ **Agendar avaliação pelo WhatsApp**
+
+ CTA secundário:
+
+ **Conhecer a Clínica**
+
+ Prova social:
+
+ **★★★★★ 4,9 no Google**
+
+ **+120 avaliações**
+
+ Localização:
+
+ **Centro de Embu das Artes – SP**
+
+ A imagem deve mostrar uma pessoa praticando Pilates em um ambiente sofisticado.
+
+ Adicionar detalhes gráficos discretos.
+
+---
+
+ # 11\. BARRA DE CONFIANÇA
+
+ Criar quatro indicadores:
+
+ **4,9/5**\
+ Avaliação no Google
+
+ **+120**\
+ Avaliações
+
+ **Atendimento personalizado**\
+ Cuidado individualizado
+
+ **Pilates + Fisioterapia**\
+ Cuidado completo
+
+ No mobile: grid 2x2.
+
+---
+
+ # 12\. SOBRE
+
+ Badge:
+
+ **SOBRE A MOVE**
+
+ Título:
+
+ **Um espaço para cuidar do seu corpo, do seu movimento e do seu bem-estar.**
+
+ Texto:
+
+ "A Clínica Move Pilates e Fisioterapia oferece um atendimento próximo e personalizado para pessoas que desejam cuidar melhor do corpo, melhorar seus movimentos e ter mais qualidade de vida.
+
+ Unimos Pilates e Fisioterapia em um ambiente acolhedor, com acompanhamento profissional e atenção às necessidades individuais de cada pessoa."
+
+ CTA:
+
+ **Conheça a Move**
+
+ Criar layout editorial com imagem + texto.
+
+---
+
+ # 13\. PILATES
+
+ Título:
+
+ **Pilates para você se movimentar melhor**
+
+ Texto:
+
+ "Exercícios orientados de acordo com seu nível, objetivos e necessidades, em um ambiente acolhedor e com acompanhamento profissional."
+
+ Criar cards para:
+
+ - Pilates com aparelhos
+- Pilates de solo
+- Pilates para iniciantes
+- Pilates avançado
+- Pilates para gestantes
+- Pilates para idosos
+
+ Cada card deve possuir:
+
+ - ícone
+- título
+- descrição curta
+- hover elegante
+
+ CTA:
+
+ **Quero conhecer o Pilates**
+
+---
+
+ # 14\. FISIOTERAPIA
+
+ Título:
+
+ **Fisioterapia com olhar individualizado**
+
+ Texto:
+
+ "Cada corpo possui uma história. Por isso, o atendimento deve considerar suas necessidades, objetivos e momento atual."
+
+ Cards:
+
+ - Fisioterapia ortopédica
+- Fisioterapia para gestantes
+- Fisioterapia para idosos
+- Reabilitação pós-cirúrgica
+- Tratamento para escoliose
+- Tratamento de artrite
+
+ Depois adicionar:
+
+ ### Outros cuidados
+
+ **Quiropraxia**
+
+ **Osteopatia**
+
+ CTA:
+
+ **Falar com um profissional**
+
+ Não fazer promessas de cura ou resultados garantidos.
+
+---
+
+ # 15\. BENEFÍCIOS
+
+ Título:
+
+ **Mais movimento. Mais confiança. Mais qualidade de vida.**
+
+ Criar seis itens:
+
+ - Força
+- Mobilidade
+- Postura
+- Equilíbrio
+- Consciência corporal
+- Bem-estar
+
+ Cada item deve possuir ícone linear.
+
+---
+
+ # 16\. PERFIS
+
+ Título:
+
+ **Um atendimento que acompanha você**
+
+ Criar quatro cards:
+
+ ### Começando no Pilates
+
+ Nunca fez Pilates? Comece no seu ritmo.
+
+ ### Gestantes
+
+ Acompanhamento pensado para as necessidades dessa fase.
+
+ ### Terceira idade
+
+ Movimento e exercícios respeitando seu ritmo e suas necessidades.
+
+ ### Recuperação
+
+ Atendimento direcionado para quem está em processo de reabilitação.
+
+ CTA:
+
+ **Descobrir o atendimento ideal**
+
+---
+
+ # 17\. DIFERENCIAIS
+
+ Título:
+
+ **Por que escolher a Move?**
+
+ Criar seção dividida imagem + conteúdo.
+
+ Itens:
+
+ ✓ Atendimento personalizado
+
+ ✓ Profissionais especializados
+
+ ✓ Ambiente acolhedor
+
+ ✓ Pilates e Fisioterapia no mesmo espaço
+
+ ✓ Atenção individual durante os exercícios
+
+ ✓ Localização no Centro de Embu das Artes
+
+ Não inventar número de profissionais, certificações, anos de experiência ou qualquer informação que não esteja neste briefing.
+
+---
+
+ # 18\. DEPOIMENTOS
+
+ Essa seção deve ser visualmente importante.
+
+ Título:
+
+ **Quem conhece a Move, recomenda.**
+
+ Mostrar:
+
+ **★★★★★**
+
+ **4,9 no Google**
+
+ **+120 avaliações**
+
+ Utilizar somente os depoimentos fornecidos:
+
+ > "Ótimo espaço, preço e qualidade profissional."
+
+ > "A experiência foi ótima, nota 10. Obrigada Ju por tudo!"
+
+ Não inventar nomes.
+
+ Não inventar avaliações.
+
+ Criar cards elegantes.
+
+ Desktop: 3 cards.
+
+ Mobile: carrossel horizontal.
+
+ CTA:
+
+ **Ver avaliações no Google**
+
+---
+
+ # 19\. INSTAGRAM
+
+ Título:
+
+ **Acompanhe a Move no Instagram**
+
+ Texto:
+
+ "Veja nossa rotina, dicas, exercícios e conteúdos sobre Pilates, Fisioterapia, movimento e bem-estar."
+
+ Criar grid de 6 imagens.
+
+ Se não houver imagens oficiais disponíveis no ambiente, utilizar imagens de placeholder visualmente coerentes, mas estruturar o código para que possam ser facilmente substituídas posteriormente.
+
+ CTA:
+
+ **@movepilatesestudio**
+
+ Link:
+
+ https://www.instagram.com/movepilatesestudio/
+
+---
+
+ # 20\. LOCALIZAÇÃO
+
+ Título:
+
+ **Estamos em Embu das Artes**
+
+ Mostrar:
+
+ **R. Nossa Sra. do Rosário, 281**\
+ **Centro – Embu das Artes – SP**\
+ **06803-430**
+
+ Telefone:
+
+ **(11) 99692-9088**
+
+ Criar botão:
+
+ **Como chegar**
+
+ O botão deve abrir o Google Maps com o endereço.
+
+ Se for possível utilizar um mapa incorporado sem prejudicar performance, pode utilizar. Caso contrário, criar um bloco visual elegante com mapa estático/placeholder e botão "Como chegar".
+
+---
+
+ # 21\. CTA FINAL
+
+ Criar uma seção grande com fundo verde escuro.
+
+ Título:
+
+ **Seu corpo merece esse cuidado.**
+
+ Texto:
+
+ "Comece hoje a cuidar melhor do seu movimento e da sua qualidade de vida."
+
+ Botão:
+
+ **Agendar pelo WhatsApp**
+
+ Segundo botão:
+
+ **Conhecer o Instagram**
+
+---
+
+ # 22\. FOOTER
+
+ Logo:
+
+ **MOVE**\
+ Pilates & Fisioterapia
+
+ Descrição:
+
+ "Pilates, Fisioterapia, Quiropraxia e Osteopatia em Embu das Artes."
+
+ Contato:
+
+ (11) 99692-9088
+
+ Endereço:
+
+ R. Nossa Sra. do Rosário, 281\
+ Centro – Embu das Artes – SP
+
+ Links:
+
+ - Início
+- A Clínica
+- Pilates
+- Fisioterapia
+- Depoimentos
+- Localização
+- Instagram
+- WhatsApp
+
+ Copyright:
+
+ **© 2026 Clínica Move Pilates e Fisioterapia. Todos os direitos reservados.**
+
+---
+
+ # 23\. WHATSAPP
+
+ Criar componente global de WhatsApp.
+
+ Desktop:
+
+ Botão flutuante com:
+
+ **Agende pelo WhatsApp**
+
+ Mobile:
+
+ Somente ícone + tooltip quando necessário.
+
+ Link:
+
+ https://wa.me/5511996929088
+
+ Criar mensagens contextualizadas.
+
+ Hero:
+
+ "Olá! Gostaria de agendar uma avaliação na Clínica Move."
+
+ Pilates:
+
+ "Olá! Gostaria de saber mais sobre as aulas de Pilates."
+
+ Fisioterapia:
+
+ "Olá! Gostaria de saber mais sobre os atendimentos de Fisioterapia."
+
+ Não utilizar API do WhatsApp.
+
+ Somente links `wa.me`.
+
+---
+
+ # 24\. RESPONSIVIDADE
+
+ Implementar mobile-first.
+
+ Breakpoints adequados para:
+
+ - 360px
+- 390px
+- 430px
+- 768px
+- 1024px
+- 1280px
+- 1440px+
+
+ Testar especialmente:
+
+ - iPhone
+- Android
+- tablet
+- notebook
+- monitor desktop
+
+ Não permitir overflow horizontal.
+
+---
+
+ # 25\. ANIMAÇÕES
+
+ Utilizar animações suaves:
+
+ - fade-up
+- fade-in
+- scale muito discreto
+- hover
+- transições de cor
+- header ao scroll
+
+ Se utilizar biblioteca de animação, mantenha-a leve.
+
+ Respeitar:
+
+ `prefers-reduced-motion`
+
+ Não exagerar nas animações.
+
+---
+
+ # 26\. SEO
+
+ Configurar:
+
+ Title:
+
+ **Clínica Move Pilates e Fisioterapia | Pilates em Embu das Artes**
+
+ Meta description:
+
+ **Pilates, Fisioterapia, Quiropraxia e Osteopatia em Embu das Artes. Atendimento personalizado para cuidar do seu corpo, movimento e qualidade de vida.**
+
+ Utilizar:
+
+ - 1 H1
+- H2 para seções
+- H3 para cards
+- alt text
+- HTML semântico
+- canonical quando apropriado
+- Open Graph
+- favicon
+
+ Criar estrutura de SEO local.
+
+ Adicionar JSON-LD para LocalBusiness/HealthAndBeautyBusiness somente com informações realmente conhecidas.
+
+ Não inventar dados.
+
+---
+
+ # 27\. PERFORMANCE
+
+ Prioridade alta para performance.
+
+ Implementar:
+
+ - lazy loading
+- imagens responsivas
+- WebP/AVIF quando possível
+- preload somente do que for realmente necessário
+- CSS otimizado
+- JavaScript mínimo
+- evitar bibliotecas desnecessárias
+- evitar scripts de terceiros sem necessidade
+
+ Meta:
+
+ Excelente desempenho no Lighthouse, especialmente em mobile.
+
+---
+
+ # 28\. ACESSIBILIDADE
+
+ Implementar:
+
+ - HTML semântico
+- alt text
+- aria-label quando necessário
+- foco visível
+- navegação por teclado
+- contraste adequado
+- botões acessíveis
+- links identificáveis
+- suporte a reduced motion
+
+---
+
+ # 29\. REGRAS DE CONTEÚDO
+
+ É extremamente importante:
+
+ NÃO inventar:
+
+ - profissionais
+- nomes de fisioterapeutas
+- certificados
+- anos de experiência
+- quantidade de alunos
+- quantidade de unidades
+- resultados clínicos
+- depoimentos
+- avaliações
+- prêmios
+
+ NÃO fazer promessas de cura.
+
+ NÃO afirmar que um tratamento "cura" uma doença.
+
+ NÃO utilizar linguagem médica sensacionalista.
+
+ Utilizar somente as informações fornecidas.
+
+---
+
+ # 30\. QUALIDADE VISUAL
+
+ Não entregue algo que pareça um template básico.
+
+ Quero uma interface com nível visual de uma agência profissional.
+
+ Prestar atenção especialmente em:
+
+ - espaçamento
+- hierarquia tipográfica
+- alinhamento
+- proporção das imagens
+- consistência dos cards
+- estados hover
+- botões
+- responsividade
+- ritmo visual entre seções
+
+ Criar uma página com personalidade própria.
+
+ O design deve transmitir:
+
+ **"Clínica profissional, sofisticada e acolhedora de Pilates e Fisioterapia em Embu das Artes."**
+
+---
+
+ # 31\. CRITÉRIOS DE ACEITE
+
+ Antes de considerar o projeto concluído, verifique:
+
+ - [ ] Página completa implementada
+- [ ] Todas as seções funcionando
+- [ ] Responsividade desktop/mobile
+- [ ] Menu mobile funcionando
+- [ ] Header sticky funcionando
+- [ ] Todos os CTAs funcionando
+- [ ] WhatsApp funcionando
+- [ ] Instagram funcionando
+- [ ] Google Maps funcionando
+- [ ] Links sem erros
+- [ ] Sem overflow horizontal
+- [ ] Imagens responsivas
+- [ ] SEO configurado
+- [ ] Meta tags configuradas
+- [ ] Acessibilidade básica implementada
+- [ ] Performance otimizada
+- [ ] Console sem erros
+- [ ] Código organizado
+- [ ] Componentes reutilizáveis
+- [ ] Nenhuma informação inventada
+
+---
+
+ # 32\. PROCESSO DE DESENVOLVIMENTO
+
+ Não tente fazer tudo de forma desorganizada em um único passo.
+
+ Siga este processo:
+
+ ### Etapa 1 — Estrutura
+
+ Analise o projeto atual e defina a arquitetura.
+
+ ### Etapa 2 — Design
+
+ Implemente primeiro o design system, tipografia, cores, espaçamentos e componentes básicos.
+
+ ### Etapa 3 — Página
+
+ Construa todas as seções na ordem definida.
+
+ ### Etapa 4 — Responsividade
+
+ Otimize para mobile, tablet e desktop.
+
+ ### Etapa 5 — Interações
+
+ Implemente menu, scroll, animações, hover e WhatsApp.
+
+ ### Etapa 6 — SEO e acessibilidade
+
+ Configure metadata, semântica e acessibilidade.
+
+ ### Etapa 7 — QA
+
+ Execute uma revisão completa procurando:
+
+ - erros
+- links quebrados
+- problemas de layout
+- overflow
+- problemas mobile
+- contraste
+- console errors
+- componentes inconsistentes
+
+ Corrija os problemas encontrados.
+
+---
+
+ # RESULTADO ESPERADO
+
+ Ao finalizar, quero ter uma **landing page estática completa e pronta para produção**, visualmente premium e com foco em conversão.
+
+ A jornada do usuário deve ser:
+
+ **Conhece a Move → entende os serviços → percebe os benefícios → vê avaliações → encontra a localização → clica no WhatsApp → agenda.**
+
+ O principal objetivo de negócio é:
+
+ ### GERAR AGENDAMENTOS PELO WHATSAPP.
+
+ Não entregue apenas código funcional.
+
+ Entregue uma experiência visual refinada, moderna e profissional.
